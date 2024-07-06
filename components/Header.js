@@ -38,7 +38,6 @@ const Header = () => {
             <nav ref={navRef} className={`nav ${isNavVisible ? 'active' : ''}`}>
                 <ul>
                     <li><Link href="/about">ABOUT</Link></li>
-                    <li><Link href="/demo">DEMO</Link></li>
                     <li><Link href="/portfolio">PORTFOLIO</Link></li>
                     <li><Link href="/partners">PARTNERS</Link></li>
                     <li><Link href="/contact">CONTACT</Link></li>

@@ -12,7 +12,8 @@
 }
 
 .left1 h1{
-    font-size: xxx-large;
+    font-size: 90px;
+    line-height: normal;
     font-weight: bold;
     color: #899BFC;
     text-align: left;
@@ -21,6 +22,7 @@
 .left1 p{
     color: #03174B;
     margin-bottom: 30px;
+    font-size: x-large;
 }
 
 .left1 .button{
@@ -86,6 +88,10 @@ h1{
 }
 
 @media (max-width: 768px) {
+    .left1 h1{
+        font-size: xxx-large;
+    }
+
     .section1{
         flex-wrap: wrap-reverse;
         height: auto;

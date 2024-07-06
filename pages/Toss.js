@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/Toss.module.css';
-import BodyTracking from '../components/BodyTracking';
+import BodyTracking from '../components/_minion/BodyTracking';
 
 const Toss = () => {
   const [pose, setPose] = useState(null);

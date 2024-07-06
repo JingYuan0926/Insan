@@ -16,7 +16,6 @@ export default function Footer() {
       </div>
       <nav className="flex justify-center space-x-4 mb-6 max-md:space-x-2">
         <Link href="/about" className="text-black hover:text-white hover:text-opacity-70 max-md:text-xs">ABOUT</Link>
-        <Link href="/demo" className="text-black hover:text-white hover:text-opacity-70 max-md:text-xs">DEMO</Link>
         <Link href="/portfolio" className="text-black hover:text-white hover:text-opacity-70 max-md:text-xs">PORTFOLIO</Link>
         <Link href="/partners" className="text-black hover:text-white hover:text-opacity-70 max-md:text-xs">PARTNERS</Link>
         <Link href="/contact" className="text-black hover:text-white hover:text-opacity-70 max-md:text-xs">CONTACT</Link>
