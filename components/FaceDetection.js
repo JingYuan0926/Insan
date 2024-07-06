@@ -57,10 +57,10 @@ const FaceDetection = () => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <video ref={videoRef} style={{ width: '40%' }} />
       {expression && (
-        <img src={expressionImages[expression]} alt={expression} style={{ width: '20%', marginLeft: '20px' }} />
+        <img src={expressionImages[expression]} alt={expression} style={{ width: '20%', marginRight: '20px' }} />
       )}
+      <video ref={videoRef} style={{ width: '40%' }} />
     </div>
   );
 };
