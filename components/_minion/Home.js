@@ -18,8 +18,9 @@ const Home = ({ modelUrl, initialPose = null }) => {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.description}>
-        <h1>Welcome to the Minion Scene</h1>
-        <p>This is where the minion model is displayed and you can interact with the camera.</p>
+        <h1 style={{ fontSize: '3em', fontWeight: 'bold' }}>Movie</h1>
+        <p><em>This is how Motion Capture Technology is used in making movies.</em></p>
+        <p><em>Open the Camera and briefly move your body and observe the model on the computer. The model takes a few seconds to load.</em></p>
       </div>
       <div className={styles.container}>
         <div className={styles.left}>

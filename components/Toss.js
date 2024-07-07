@@ -59,8 +59,8 @@ const Toss = () => {
   return (
     <div className={styles.homeContainer}>
       <div className={styles.description}>
-        <h1>Welcome to the Toss Game</h1>
-        <p>Raise both hands to start the toss video. Interact with the camera to update your pose.</p>
+        <h1 style={{ fontSize: '3em', fontWeight: 'bold' }}>Life Science and Sports</h1>
+        <p><em>Open the camera and try doing a basketball tossing move and observe the model on the computer. The model takes a few seconds to load.</em></p>
       </div>
       <div className={styles.container}>
         <div className={styles.left}>
