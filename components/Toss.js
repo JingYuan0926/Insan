@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/Toss.module.css';
-import BodyTracking from '../components/_minion/BodyTracking';
+import BodyTracking from './_minion/BodyTracking';
 
 const Toss = () => {
   const [pose, setPose] = useState(null);
@@ -22,7 +22,7 @@ const Toss = () => {
       const leftShoulder = keypoints[5];
 
       const areBothHandsRaised =
-        rightWrist.y < rightShoulder.y - 50 && leftWrist.y < leftShoulder.y - 50; // Simplified condition for both hands raised
+        rightWrist.y < rightShoulder.y - 50 && leftWrist.y < leftShoulder.y - 50;
 
       if (areBothHandsRaised && !isTossVideoPlaying) {
         setIsTossVideoPlaying(true);
@@ -57,36 +57,42 @@ const Toss = () => {
   }, [isTossVideoPlaying]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.left}>
-        <div className={styles['canvas-wrapper']}>
-          <video
-            ref={waitVideoRef}
-            src="/Wait.mp4"
-            className={`${styles.video} ${styles.visible}`}
-            muted
-            playsInline
-            loop
-            autoPlay
-          />
-          <video
-            ref={tossVideoRef}
-            src="/BallToss.mp4"
-            className={styles.video}
-            muted
-            playsInline
-            style={{ opacity: 0 }}
-          />
-        </div>
+    <div className={styles.homeContainer}>
+      <div className={styles.description}>
+        <h1>Welcome to the Toss Game</h1>
+        <p>Raise both hands to start the toss video. Interact with the camera to update your pose.</p>
       </div>
-      <div className={styles.right} onClick={toggleCamera}>
-        {isCameraOpen ? (
-          <BodyTracking onPoseUpdate={setPose} />
-        ) : (
-          <div className={styles['camera-button']}>
-            Open Camera
+      <div className={styles.container}>
+        <div className={styles.left}>
+          <div className={styles['canvas-wrapper']}>
+            <video
+              ref={waitVideoRef}
+              src="/Wait.mp4"
+              className={`${styles.video} ${styles.visible}`}
+              muted
+              playsInline
+              loop
+              autoPlay
+            />
+            <video
+              ref={tossVideoRef}
+              src="/BallToss.mp4"
+              className={styles.video}
+              muted
+              playsInline
+              style={{ opacity: 0 }}
+            />
           </div>
-        )}
+        </div>
+        <div className={styles.right} onClick={toggleCamera}>
+          {isCameraOpen ? (
+            <BodyTracking onPoseUpdate={setPose} />
+          ) : (
+            <div className={styles['camera-button']}>
+              Open Camera
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

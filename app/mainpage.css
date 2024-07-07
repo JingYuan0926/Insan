@@ -31,7 +31,7 @@
     background-color: #07287a;
     color: white;
     border-radius: 15px;
-    font-size: large;
+    font-size: larger;
     font-weight: 500;
 }
 
@@ -87,10 +87,26 @@ h1{
     color: #2B356C;
 }
 
+
+.heightcont {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.scroll-container {
+    scroll-snap-align: start;
+}
+
+
+
 @media (max-width: 768px) {
     .left1 h1{
         font-size: xxx-large;
     }
+
 
     .section1{
         flex-wrap: wrap-reverse;

@@ -1,43 +1,49 @@
 "use client"
 
 import Link from "next/link";
-import "./mainpage.css"
+import "./mainpage.css";
 import Home from '../components/_minion/Home';
+import Toss from "../components/Toss";
 
 export default function Mainpage() {
     const modelUrl = '/models/Minion.fbx'; // Ensure this path is correct and model is in public/models
     return (
-        <>            
-        <div className="section1">
-            <div className="left1">
-                <h1>
-                Leading Malaysia
-                Motion Technology
-                </h1>
-                <p>
-                Bringing Motion to Life:<br/> 
-                Transforming Ideas into Reality with 
-                Cutting-Edge Motion Capture Technology
-                </p>
-                <Link href="/contact">
-                    <p className="button">CONTACT US</p>
-                </Link>
-            </div>
-            <div className="right1">
-                <img src="/sprinter.png" alt="sprinter"/>
-            </div>
-        </div>
-
-
-
-
-        <Home modelUrl={modelUrl} />;
-
-
-
-
-
+        <>
         <div className="heightcont">
+        <div className="scroll-container">
+            <div className="section1">
+                <div className="left1">
+                    <h1>
+                    Leading Malaysia
+                    Motion Technology
+                    </h1>
+                    <p>
+                    Bringing Motion to Life:<br/> 
+                    Transforming Ideas into Reality with 
+                    Cutting-Edge Motion Capture Technology
+                    </p>
+                    <Link href="/contact">
+                        <p className="button">CONTACT US</p>
+                    </Link>
+                </div>
+                <div className="right1">
+                    <img src="/sprinter.png" alt="sprinter"/>
+                </div>
+            </div>
+        </div>            
+        
+
+        
+            <div className="scroll-container">
+                <Home modelUrl={modelUrl} />
+            </div>
+            <div className="scroll-container">
+                <Toss />
+            </div>
+        
+
+
+        <div className="scroll-container h-screen">
         <h1>OUR SOLUTION</h1>
         <div className="section2">
             <div className="sec2container">
@@ -100,8 +106,10 @@ export default function Mainpage() {
             </div>
         </div>
         </div>
+        </div>
         
-
+        
         </>
     );
 }
+
