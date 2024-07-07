@@ -4,11 +4,13 @@ import Link from "next/link";
 import "./mainpage.css";
 import Home from '../components/_minion/Home';
 import Toss from "../components/Toss";
+import ChatBox from "../components/ChatBox";
 
 export default function Mainpage() {
     const modelUrl = '/models/Minion.fbx'; // Ensure this path is correct and model is in public/models
     return (
         <>
+        <ChatBox/>
         <div className="heightcont">
         <div className="scroll-container">
             <div className="section1">
@@ -41,13 +43,13 @@ export default function Mainpage() {
                 <Toss />
             </div>
             <div className="scroll-container">
-                <video controls autoplay muted className="h-screen">
+                <video controls autoplay muted className="h-screen w-screen">
                 <source src="/facedetection.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
             </div>
             <div className="scroll-container">
-                <video controls autoplay muted className="h-screen">
+                <video controls autoplay muted className="h-screen w-screen">
                 <source src="/plane.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
