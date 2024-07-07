@@ -40,6 +40,18 @@ export default function Mainpage() {
             <div className="scroll-container">
                 <Toss />
             </div>
+            <div className="scroll-container">
+                <video controls autoplay muted className="h-screen">
+                <source src="/facedetection.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+            </div>
+            <div className="scroll-container">
+                <video controls autoplay muted className="h-screen">
+                <source src="/plane.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+                </video>
+            </div>
         
 
 
