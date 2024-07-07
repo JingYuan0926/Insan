@@ -1,0 +1,31 @@
+h1{
+    font-size: xxx-large;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+h2{
+    font-size: large;
+    text-align: center;
+    margin-bottom: 60px
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 5%;
+}
+
+.main-container img,
+.main-container h3,
+.main-container p{
+    display: inline-block;
+}
+
+.main-container h3{
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
